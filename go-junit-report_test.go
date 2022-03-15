@@ -12,8 +12,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/corverroos/go-junit-report/formatter"
-	"github.com/corverroos/go-junit-report/parser"
+	"github.com/neilgarb/go-junit-report/formatter"
+	"github.com/neilgarb/go-junit-report/parser"
 )
 
 var matchTest = flag.String("match", "", "only test testdata matching this pattern")
@@ -1513,7 +1513,7 @@ var testCases = []TestCase{
 		report: &parser.Report{
 			Packages: []parser.Package{
 				{
-					Name:     "github.com/corverroos/test/failedsummary",
+					Name:     "github.com/neilgarb/test/failedsummary",
 					Duration: 5 * time.Millisecond,
 					Time:     5,
 					Tests: []*parser.Test{

@@ -1,3 +1,3 @@
-module github.com/corverroos/go-junit-report
+module github.com/neilgarb/go-junit-report
 
 go 1.2

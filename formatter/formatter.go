@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/corverroos/go-junit-report/parser"
+	"github.com/neilgarb/go-junit-report/parser"
 )
 
 // JUnitTestSuites is a collection of JUnit test suites.
