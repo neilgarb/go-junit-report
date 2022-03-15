@@ -4,7 +4,7 @@
 		<properties>
 			<property name="go.version" value="1.0"></property>
 		</properties>
-		<testcase classname="test-go-junit-report" name="TestDoFoo" time="0.270" system-out="cov_test.go:10: DoFoo log 1&#xA;cov_test.go:10: DoFoo log 2"></testcase>
-		<testcase classname="test-go-junit-report" name="TestDoFoo2" time="0.160" system-out="cov_test.go:21: DoFoo2 log 1&#xA;cov_test.go:21: DoFoo2 log 2"></testcase>
+		<testcase classname="github.com/dmitris/test-go-junit-report" name="TestDoFoo" time="0.270" system-out="cov_test.go:10: DoFoo log 1&#xA;cov_test.go:10: DoFoo log 2"></testcase>
+		<testcase classname="github.com/dmitris/test-go-junit-report" name="TestDoFoo2" time="0.160" system-out="cov_test.go:21: DoFoo2 log 1&#xA;cov_test.go:21: DoFoo2 log 2"></testcase>
 	</testsuite>
 </testsuites>
