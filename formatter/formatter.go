@@ -80,9 +80,19 @@ func JUnitReportXML(report *parser.Report, noXMLHeader bool, goVersion string, w
 		}
 
 		classname := pkg.Name
-		if idx := strings.LastIndex(classname, "/"); idx > -1 && idx < len(pkg.Name) {
-			classname = pkg.Name[idx+1:]
-		}
+		// NOTE(neil): We don't want to trim the package name. For example, in
+		// the XML below, we'd rather know that the error was in "bitx/fe/api"
+		// than just in "api". Gitlab doesn't show the testsuite name anywhere,
+		// so it's not easy to navigate to the right place in the code.
+		//
+		//   <testcase classname="api" name="TestAuthoriseHandler" time="0.000">
+		//     <failure message="Failed" type=""></failure>
+		//   </testcase>
+		//
+		// ---
+		// if idx := strings.LastIndex(classname, "/"); idx > -1 && idx < len(pkg.Name) {
+		//   classname = pkg.Name[idx+1:]
+		// }
 
 		// properties
 		if goVersion == "" {
